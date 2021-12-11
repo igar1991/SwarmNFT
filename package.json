@@ -1,0 +1,39 @@
+{
+  "name": "swarm-nft",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Igor Chernishev",
+  "license": "MIT",
+  "scripts": {
+    "build:bundlejs:prd": "webpack --config webpack.config.build-lib.js --mode production",
+    "build:bundlejs:dev": "webpack --config webpack.config.build-lib.js --mode development",
+    "build": "run-s build:bundlejs:prd build:bundlejs:dev",
+    "start": "run-s build exec:all",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-transform-parameters": "^7.16.3",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "formdata-node": "^4.3.1",
+    "jest": "^27.4.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "regenerator-runtime": "^0.13.9",
+    "terser-webpack-plugin": "^5.2.5",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "dependencies": {
+    "@ethersphere/bee-js": "^3.0.0",
+    "ethers": "^5.5.2"
+  }
+}
