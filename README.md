@@ -40,7 +40,7 @@ if (typeof window.ethereum === 'undefined') {
 
 let userAddress = null;
 // instance of Bee with gateway url or private node url
-const bee = new Bee('https://bee-0.gateway.ethswarm.org');
+const bee = new Bee('https://api.gateway.ethswarm.org');
 // create provider from metamask
 const provider = new providers.Web3Provider(window.ethereum, 'any');
 // get user address from metamask
